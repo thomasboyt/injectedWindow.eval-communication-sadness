@@ -12,5 +12,11 @@
   "devtools_page": "devtools.html",
   "background": {
     "scripts": ["background.js"]
-  }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content-script.js"],
+    "run_at": "document_end",
+    "all_frames": true
+  }]
 }
